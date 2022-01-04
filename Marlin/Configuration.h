@@ -813,6 +813,7 @@
 //#define ENDSTOPPULLDOWNS
 #if DISABLED(ENDSTOPPULLDOWNS)
   // Disable ENDSTOPPULLDOWNS to set pulldowns individually
+  
   //#define ENDSTOPPULLDOWN_XMAX
   //#define ENDSTOPPULLDOWN_YMAX
   //#define ENDSTOPPULLDOWN_ZMAX
@@ -1049,8 +1050,11 @@
  *    - For simple switches connect...
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
+ *
  */
 //#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
+
+//#define Z_STOP_PIN 19 // Source DWIN2
 
 /**
  * Probe Type
@@ -1065,6 +1069,7 @@
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
 //#define PROBE_MANUALLY
+//#define MANUAL_PROBE_START_Z 0.2
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -1554,7 +1559,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
@@ -2656,32 +2661,32 @@
  */
 
 //
-// 480x320, 3.5", SPI Display with Rotary Encoder from MKS
-// Usually paired with MKS Robin Nano V2 & V3
+// 480x320, 3.5", SPI Display From MKS
+// Normally used in MKS Robin Nano V2
 //
 //#define MKS_TS35_V2_0
 
 //
 // 320x240, 2.4", FSMC Display From MKS
-// Usually paired with MKS Robin Nano V1.2
+// Normally used in MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT24
 
 //
 // 320x240, 2.8", FSMC Display From MKS
-// Usually paired with MKS Robin Nano V1.2
+// Normally used in MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT28
 
 //
 // 320x240, 3.2", FSMC Display From MKS
-// Usually paired with MKS Robin Nano V1.2
+// Normally used in MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT32
 
 //
 // 480x320, 3.5", FSMC Display From MKS
-// Usually paired with MKS Robin Nano V1.2
+// Normally used in MKS Robin Nano V1.2
 //
 #define MKS_ROBIN_TFT35
 
@@ -2692,7 +2697,7 @@
 
 //
 // 320x240, 3.2", FSMC Display From MKS
-// Usually paired with MKS Robin
+// Normally used in MKS Robin
 //
 //#define MKS_ROBIN_TFT_V1_1R
 
